@@ -23,5 +23,35 @@ public class DialogContent extends Parent {
     @FindBy(css = "span[class='mat-tooltip-trigger logo-text']")
     public WebElement txtTechnoStudy;
 
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'ADD')]//button")
+    public WebElement addImgButton;
+
+    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-accent ng-star-inserted'][1]")
+    public WebElement editImgButton;
+
+    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted'][1]")
+    public WebElement deleteImgButton;
+
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-square-xmark']")
+    public WebElement closeButton;
+
+    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-button mat-raised-button mat-button-base mat-accent']")
+    public WebElement deleteButton;
+
+
+
+    @FindBy(xpath = " //ms-text-field[@formcontrolname='name']/input")
+    public WebElement nameInput;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
+    public WebElement codeInput;
+
+    @FindBy(xpath = "//ms-save-button[@class='ng-star-inserted']/button")
+    public WebElement saveBtn;
+
+    @FindBy(xpath = "//div[@style='position: relative; height: 100%;']")
+    public WebElement successfullyElement;
+
+
 }
 
