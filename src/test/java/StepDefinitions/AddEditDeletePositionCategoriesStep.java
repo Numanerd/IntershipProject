@@ -50,6 +50,7 @@ public class AddEditDeletePositionCategoriesStep {
     public void userShouldClickOnDeleteButton() {
         dc.clickFunction(dc.deleteImgButton);
         dc.clickFunction(dc.deleteButton);
+        //
 
     }
 }
