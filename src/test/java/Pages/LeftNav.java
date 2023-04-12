@@ -38,5 +38,8 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "(//span[text()='Bank Accounts'])[1]")
     public WebElement bankAccounts;
 
+    @FindBy(linkText = "Fields")
+    public WebElement fields;
+
 
 }
