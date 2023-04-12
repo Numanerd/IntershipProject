@@ -36,4 +36,14 @@ public class LeftNav extends Parent{
     public WebElement subjectCategories;
 
 
+    @FindBy(xpath ="//span[text()='Human Resources']")
+    public WebElement HumanResources;
+
+    @FindBy(xpath ="(//span[text()='Setup'])[3]")
+    public WebElement HumanResourcesSetup;
+
+    @FindBy (xpath = "//span[text()='Position Categories']")
+    public WebElement PositionCategories;
+
+
 }
