@@ -39,7 +39,6 @@ public class DialogContent extends Parent {
     public WebElement deleteButton;
 
 
-
     @FindBy(xpath = " //ms-text-field[@formcontrolname='name']/input")
     public WebElement nameInput;
 
@@ -52,6 +51,25 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//div[@style='position: relative; height: 100%;']")
     public WebElement successfullyElement;
 
+    @FindBy(css = "[data-placeholder='IBAN']")
+    public WebElement iban;
+
+    @FindBy(xpath = "(//*[text()='Currency'])[3]")
+    public WebElement currency;
+
+    @FindBy(xpath = "(//*[@role='option'])[4]")
+    public WebElement currencyTRY;
+
+    @FindBy(css = "[data-placeholder='Name']")          // Genel search name inputu
+    public WebElement searchName;
+
+    @FindBy(xpath = "//*[text()='Search']")             // Genel search butonu
+    public WebElement searchButton;
+
+    @FindBy(xpath = "//*[text()='123grup12']")
+    public WebElement myIBAN;
+
+    @FindBy(xpath = "(//*[text()='124grup12']/following-sibling::td)[4]//ms-delete-button/button")
+    public WebElement ibanDelete;
 
 }
-
