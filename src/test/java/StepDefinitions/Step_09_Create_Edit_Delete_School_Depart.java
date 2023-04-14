@@ -42,4 +42,9 @@ public class Step_09_Create_Edit_Delete_School_Depart {
 
         dc.verifyContainsTextFunction(dc.successfullyElement, "successfully");
     }
+
+    @Then("Exist already message should be displayed")
+    public void existAlreadyMessageShouldBeDisplayed() {
+        dc.verifyContainsTextFunction(dc.successfullyElement, "already");
+    }
 }

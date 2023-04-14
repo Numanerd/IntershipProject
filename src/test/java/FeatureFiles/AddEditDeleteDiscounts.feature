@@ -1,4 +1,4 @@
-Feature: Add Edit Delete Attestations
+Feature: Add Edit Delete Discounts
 
   Background:
 
