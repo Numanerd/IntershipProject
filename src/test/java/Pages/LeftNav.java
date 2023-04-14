@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNav extends Parent {
+public class LeftNav extends Parent{
 
-    public LeftNav() {
-        PageFactory.initElements(GWD.getDriver(), this);
+    public LeftNav(){
+        PageFactory.initElements(GWD.getDriver(),this);
     }
 
     @FindBy(xpath = "//span[text()='Setup'][1]")
@@ -35,8 +35,18 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "//span[text()='Subject Categories']")
     public WebElement subjectCategories;
 
-    @FindBy(xpath = "(//span[text()='Bank Accounts'])[1]")
-    public WebElement bankAccounts;
+
+    @FindBy(xpath ="//span[text()='Human Resources']")
+    public WebElement HumanResources;
+
+    @FindBy(xpath ="(//span[text()='Setup'])[3]")
+    public WebElement HumanResourcesSetup;
+
+    @FindBy (xpath = "//span[text()='Position Categories']")
+    public WebElement PositionCategories;
+
+    @FindBy(linkText = "Fields")
+    public WebElement fields;
 
 
 }
