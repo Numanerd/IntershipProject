@@ -1,9 +1,11 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class DialogContent extends Parent {
 
@@ -52,6 +54,30 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//div[@style='position: relative; height: 100%;']")
     public WebElement successfullyElement;
 
+    @FindBy(css = "[data-placeholder='Name']")          // Genel search name inputu
+    public WebElement searchName;
+
+    @FindBy(xpath = "//*[text()='Search']")             // Genel search butonu
+    public WebElement searchButton;
+
+
+    public WebElement getWebElement(String button){
+        switch (button){
+
+            case "nameInput": return nameInput;
+
+        }
+        return null;
+    }
+    public void searcBtnBayatlama(){
+
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton));//searc butonu tekrar click olana kadar bekle demekkendine geldi
+
+        //fuse-progress-bar  0 olana kadar bekle demek istiyorum (sayfa ust cizgide yukleme yapiyor)
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));// sifir olana kadar bekle
+
+
+    }
 
 }
 

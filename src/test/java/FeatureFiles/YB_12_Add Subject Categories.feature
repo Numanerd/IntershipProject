@@ -14,3 +14,10 @@ Feature: Add Edit and Delete Attestations
     And  Navigate to Education tab Subject Categories
     When Create a Subject Categories
     Then Exist already message should be displayed
+
+   Scenario: Edit Subject Categories
+    And  Navigate to Education tab Subject Categories
+    When Edit a Subject Catogory
+      | nameInput | kjsher |
+     Then Success message should be displayed
+
