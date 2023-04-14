@@ -65,6 +65,7 @@ public class DialogContent extends Parent {
         switch (button){
 
             case "nameInput": return nameInput;
+            case "searchName": return searchName;
 
         }
         return null;
@@ -78,6 +79,8 @@ public class DialogContent extends Parent {
 
 
     }
+
+
 
 }
 

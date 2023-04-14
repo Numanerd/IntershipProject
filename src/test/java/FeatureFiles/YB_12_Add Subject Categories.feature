@@ -21,3 +21,8 @@ Feature: Add Edit and Delete Attestations
       | nameInput | kjsher |
      Then Success message should be displayed
 
+  Scenario: Delete Subject Categories
+    And  Navigate to Education tab Subject Categories
+    When Delet a Subject Catogory
+      | searchName | kjsher |
+    Then Success message should be displayed
