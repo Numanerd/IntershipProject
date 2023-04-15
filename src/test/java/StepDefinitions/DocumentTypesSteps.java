@@ -28,6 +28,7 @@ public class DocumentTypesSteps {
 
     @When("Create a Document Types")
     public void createADocumentTypes() {
+        pr.fuseProgressBar();
         dc.clickFunction(dc.addImgButton);
         dc.sendKeysFunction(dc.nameInput, "ITU-Techno");
         dc.clickFunction(dc.stage);
@@ -43,7 +44,7 @@ public class DocumentTypesSteps {
     public void editDocumentTypes() {
         dc.sendKeysFunction(dc.searchName,"ITU-Techno");
         dc.clickFunction(dc.searchButton);
-        pr.wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
+        pr.fuseProgressBar();
         dc.clickFunction(dc.editImgButton);
         dc.sendKeysFunction(dc.nameInput, "ITUTechno");
         js.executeScript("arguments[0].click();", dc.saveBtn);
@@ -53,7 +54,7 @@ public class DocumentTypesSteps {
     public void deleteDocumentTypes() {
         dc.sendKeysFunction(dc.searchName,"ITUTechno");
         dc.clickFunction(dc.searchButton);
-        pr.wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
+        pr.fuseProgressBar();
         dc.clickFunction(dc.deleteImgButton);
         dc.clickFunction(dc.deleteButton);
     }
