@@ -7,12 +7,12 @@ Feature: Add Edit Delete Nationalities
     Then User should login successfully on the Website
 
   Scenario:
-    Given User clicks Setup on the LeftNav
-    When  click on Parameters
-    And   click on Nationalities
-    Then  click on Add Button
-    Then  click on Edit Button
-    Then  click on Delete Button
+    Given user clicks Setup on the LeftNav
+    When  Click on Parameters
+    And   Click on Nationalities
+    Then  Click on Add Button
+    Then  Click on Edit Button
+    Then  Click on Delete Button
 
 
 
