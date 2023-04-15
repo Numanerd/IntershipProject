@@ -2,9 +2,9 @@ Feature: Add Edit Delete Nationalities
 
   Background:
 
-    Given Navigate to Campus Page
-    When Enter username and password then click login button
-    Then User should login successfully on the Website
+    Given navigate to Campus Page
+    When enter username and password then click login button
+    Then user should login successfully on the Website
 
   Scenario:
     Given user clicks Setup on the LeftNav

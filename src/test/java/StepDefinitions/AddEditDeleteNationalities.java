@@ -14,14 +14,14 @@ public class AddEditDeleteNationalities {
 
     LeftNav ln = new LeftNav();
 
-    @Given("Navigate to Campus Page")
+    @Given("navigate to Campus Page")
     public void NavigateToCampusPage() {
 
         GWD.getDriver().get("https://test.mersys.io/");
         GWD.getDriver().manage().window().maximize();
     }
 
-    @When("Enter username and password then click login button")
+    @When("enter username and password then click login button")
     public void EnterUsernameAndPasswordThenClickLoginButton() {
 
         dc.sendKeysFunction(dc.username, "turkeyts");
@@ -29,7 +29,7 @@ public class AddEditDeleteNationalities {
         dc.clickFunction(dc.loginButton);
     }
 
-    @Then("User should login successfully on the Website")
+    @Then("user should login successfully on the Website")
     public void UserShouldLoginSuccessfullyOnTheWebsite() {
 
         dc.verifyContainsTextFunction(dc.txtTechnoStudy, "Techno Study");
