@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LeftNav extends Parent{
 
+
     public LeftNav(){
         PageFactory.initElements(GWD.getDriver(),this);
     }
@@ -16,6 +17,9 @@ public class LeftNav extends Parent{
 
     @FindBy(xpath = "//span[text()='Parameters']")
     public WebElement Parameters;
+
+    @FindBy(xpath = "//span[text()='Nationalities']")
+    public WebElement Nationalities;
 
     @FindBy(xpath = "//span[text()='Discounts']")
     public WebElement Discounts;
