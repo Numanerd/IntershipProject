@@ -96,4 +96,13 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[text()=' Contract ']")
     public WebElement contact;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']/input")
+    public WebElement description;
+
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']/input")
+    public  WebElement priority;
+
+    @FindBy(xpath = "//input[@data-placeholder='Description']")
+    public WebElement descriptionInput;
+
 }
