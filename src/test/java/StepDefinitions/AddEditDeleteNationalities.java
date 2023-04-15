@@ -35,7 +35,7 @@ public class AddEditDeleteNationalities {
         dc.verifyContainsTextFunction(dc.txtTechnoStudy, "Techno Study");
     }
     @Given("user clicks Setup on the LeftNav")
-    public void userClicksSetupOnTheLeftNav() {
+    public void UserClicksSetupOnTheLeftNav() {
 
         ln.clickFunction(ln.Setup);
     }
