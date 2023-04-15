@@ -81,17 +81,19 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[@class='mat-toolbar-row']")
     public WebElement boslukclick;
 
+    @FindBy(xpath = "(//*[text()='Stage'])[3]")
+    public WebElement stage;
 
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']/input")
-    public WebElement description;
+    @FindBy(xpath = "//span[text()=' Certificate ']")
+    public WebElement certificate;
 
-    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']/input")
-    public  WebElement priority;
+    @FindBy(xpath = "//span[text()=' Dismissal ']")
+    public WebElement dismissal;
 
-    @FindBy(xpath = "//input[@data-placeholder='Description']")
-    public WebElement descriptionInput;
+    @FindBy(xpath = "//span[text()=' Employment ']")
+    public WebElement employment;
 
-
-
+    @FindBy(xpath = "//span[text()=' Contract ']")
+    public WebElement contact;
 
 }
