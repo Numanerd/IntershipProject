@@ -98,6 +98,10 @@ public class AddEditDeleteDiscountsStep {
         pr.fuseProgressBar();
         ln.clickFunction(ln.fields);
         ln.clickFunction(ln.Discounts);
+        dc.clickFunction(dc.descriptionInput);
+        dc.sendKeysFunction(dc.descriptionInput,"Num");
+        dc.clickFunction(dc.searchButton);
+        pr.fuseProgressBar();
         dc.clickFunction(dc.deleteImgButton);
         dc.clickFunction(dc.deleteButton);
 
