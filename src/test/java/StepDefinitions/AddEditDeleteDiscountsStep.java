@@ -2,18 +2,20 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Pages.Parent;
 import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
 
 public class AddEditDeleteDiscountsStep {
 
-
     DialogContent dc = new DialogContent();
-
     LeftNav ln = new LeftNav();
+    Parent pr = new Parent();
 
     @Given("Navigate to Campus Page")
     public void NavigateToCampusPage() {
@@ -65,21 +67,37 @@ public class AddEditDeleteDiscountsStep {
     public void clickOnAddButton() {
 
         dc.clickFunction(dc.addImgButton);
-        dc.clickFunction(dc.closeButton);
+        dc.sendKeysFunction(dc.description,"Numan");
+        dc.sendKeysFunction(dc.codeInput,"erd1");
+        dc.sendKeysFunction(dc.priority,"12");
+        dc.clickFunction(dc.boslukclick);
+        dc.clickFunction(dc.saveBtn);
 
     }
 
     @Then("click on Edit Button")
     public void clickOnEditButton() {
 
+        pr.wait.until(ExpectedConditions.elementToBeClickable(dc.descriptionInput));
+        dc.clickFunction(dc.descriptionInput);
+        dc.sendKeysFunction(dc.descriptionInput,"Numan");
+        dc.clickFunction(dc.searchButton);
+        pr.fuseProgressBar();
         dc.clickFunction(dc.editImgButton);
-        dc.clickFunction(dc.closeButton);
+        dc.sendKeysFunction(dc.description,"Num");
+        dc.sendKeysFunction(dc.codeInput,"e");
+        dc.sendKeysFunction(dc.priority,"11");
+        dc.clickFunction(dc.boslukclick);
+        dc.clickFunction(dc.saveBtn);
 
     }
 
     @Then("click on Delete Button")
     public void clickOnDeleteButton() {
 
+        pr.fuseProgressBar();
+        ln.clickFunction(ln.fields);
+        ln.clickFunction(ln.Discounts);
         dc.clickFunction(dc.deleteImgButton);
         dc.clickFunction(dc.deleteButton);
 
