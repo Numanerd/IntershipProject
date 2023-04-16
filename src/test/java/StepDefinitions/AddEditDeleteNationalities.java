@@ -8,60 +8,49 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class AddEditDeleteAttestationsStep {
-
+public class AddEditDeleteNationalities {
 
     DialogContent dc = new DialogContent();
 
     LeftNav ln = new LeftNav();
 
-    @Given("Navigate to Campus Page")
+    @Given("navigate to Campus Page")
     public void NavigateToCampusPage() {
 
         GWD.getDriver().get("https://test.mersys.io/");
         GWD.getDriver().manage().window().maximize();
-
     }
 
-    @When("Enter username and password then click login button")
+    @When("enter username and password then click login button")
     public void EnterUsernameAndPasswordThenClickLoginButton() {
 
-        dc.sendKeysFunction(dc.username,"turkeyts");
-        dc.sendKeysFunction(dc.password,"TechnoStudy123");
+        dc.sendKeysFunction(dc.username, "turkeyts");
+        dc.sendKeysFunction(dc.password, "TechnoStudy123");
         dc.clickFunction(dc.loginButton);
-
     }
 
-    @Then("User should login successfully on the Website")
+    @Then("user should login successfully on the Website")
     public void UserShouldLoginSuccessfullyOnTheWebsite() {
 
-        dc.verifyContainsTextFunction(dc.txtTechnoStudy,"Techno Study");
-
+        dc.verifyContainsTextFunction(dc.txtTechnoStudy, "Techno Study");
     }
-
-
-    @Given("User clicks Setup on the LeftNav")
-    public void userClicksSetupOnTheLeftNav() {
+    @Given("user clicks Setup on the LeftNav")
+    public void UserClicksSetupOnTheLeftNav() {
 
         ln.clickFunction(ln.Setup);
-
     }
-
-    @When("click on Parameters")
+    @When("Click on Parameters")
     public void clickOnParameters() {
 
         ln.clickFunction(ln.Parameters);
-
+    }
+    @And("Click on Nationalities")
+    public void Nationalities()
+    {
+        ln.clickFunction(ln.Nationalities);
     }
 
-    @Then("click on Discounts")
-    public void clickOnDiscounts() {
-
-        ln.clickFunction(ln.Discounts);
-
-    }
-
-    @And("click on Add Button")
+    @Then("Click on Add Button")
     public void clickOnAddButton() {
 
         dc.clickFunction(dc.addImgButton);
@@ -69,7 +58,7 @@ public class AddEditDeleteAttestationsStep {
 
     }
 
-    @Then("click on Edit Button")
+    @Then("Click on Edit Button")
     public void clickOnEditButton() {
 
         dc.clickFunction(dc.editImgButton);
@@ -77,12 +66,13 @@ public class AddEditDeleteAttestationsStep {
 
     }
 
-    @Then("click on Delete Button")
-    public void clickOnDeleteButton() {
+    @Then("Click on Delete Button")
+    public void ClickOnDeleteButton() {
 
         dc.clickFunction(dc.deleteImgButton);
         dc.clickFunction(dc.deleteButton);
 
     }
+
 }
 

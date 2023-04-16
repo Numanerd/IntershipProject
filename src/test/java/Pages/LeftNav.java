@@ -7,15 +7,19 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LeftNav extends Parent{
 
+
     public LeftNav(){
         PageFactory.initElements(GWD.getDriver(),this);
     }
 
-    @FindBy(xpath = "//span[text()='Setup'][1]")
+    @FindBy(xpath = "(//span[text()='Setup'])[1]")
     public WebElement Setup;
 
     @FindBy(xpath = "//span[text()='Parameters']")
     public WebElement Parameters;
+
+    @FindBy(xpath = "//span[text()='Nationalities']")
+    public WebElement Nationalities;
 
     @FindBy(xpath = "//span[text()='Discounts']")
     public WebElement Discounts;
@@ -34,6 +38,31 @@ public class LeftNav extends Parent{
 
     @FindBy(xpath = "//span[text()='Subject Categories']")
     public WebElement subjectCategories;
+
+
+    @FindBy(xpath ="//span[text()='Human Resources']")
+    public WebElement HumanResources;
+
+    @FindBy(xpath ="(//span[text()='Setup'])[3]")
+    public WebElement HumanResourcesSetup;
+
+    @FindBy (xpath = "//span[text()='Position Categories']")
+    public WebElement PositionCategories;
+
+    @FindBy(linkText = "Fields")
+    public WebElement fields;
+
+    @FindBy(xpath = "//span[text()='Locations']")
+    public WebElement locations;
+
+    @FindBy(xpath = "//span[text()='Bank Accounts']")
+    public WebElement bankAccounts;
+
+    @FindBy(xpath = "//span[text()='Positions']")
+    public WebElement position;
+
+    @FindBy(xpath = "(//span[text()='Document Types'])[1]")
+    public WebElement DocumentTypes;
 
 
 }
