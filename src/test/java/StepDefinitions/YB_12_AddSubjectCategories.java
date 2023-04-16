@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Pages.Parent;
 import Utilities.ExelUtulity;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -13,6 +14,7 @@ import java.util.List;
 
 public class YB_12_AddSubjectCategories {
     LeftNav ln=new LeftNav();
+    Parent pr=new Parent();
     DialogContent dc=new DialogContent();
 
     @And("Navigate to Education tab Subject Categories")
@@ -46,7 +48,7 @@ public class YB_12_AddSubjectCategories {
         ) {
             dc.sendKeysFunction(dc.searchName,satir.get(0));
             dc.clickFunction(dc.searchButton);
-            dc.searcBtnBayatlama();
+            pr.fuseProgressBar();
             dc.clickFunction(dc.editImgButton);
 
 
@@ -73,7 +75,7 @@ public class YB_12_AddSubjectCategories {
             WebElement element=dc.getWebElement(items.get(i).get(0));
             dc.sendKeysFunction(element,items.get(i).get(1));
             dc.clickFunction(dc.searchButton);
-            dc.searcBtnBayatlama();
+            pr.fuseProgressBar();
             dc.clickFunction(dc.deleteImgButton);
             dc.clickFunction(dc.deleteButton);
 

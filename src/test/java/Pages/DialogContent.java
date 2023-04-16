@@ -93,11 +93,21 @@ public class DialogContent extends Parent {
     public WebElement description;
 
     @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']/input")
-    public  WebElement priority;
+    public WebElement priority;
 
     @FindBy(xpath = "//input[@data-placeholder='Description']")
     public WebElement descriptionInput;
 
+    public WebElement getWebElement(String strbutton) {
+        switch (strbutton) {
+
+            case "nameInput":
+                return nameInput;
+            case "searchName":
+                return searchName;
+        }
+        return null;
 
 
+    }
 }
