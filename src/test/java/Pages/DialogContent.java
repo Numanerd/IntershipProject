@@ -98,15 +98,14 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//input[@data-placeholder='Description']")
     public WebElement descriptionInput;
 
-    public WebElement getWebElement(String strbutton) {
-        switch (strbutton) {
+    @FindBy(css = "[data-placeholder='IBAN']")
+    public WebElement iban;
 
-            case "nameInput":
-                return nameInput;
-            case "searchName":
-                return searchName;
-        }
-        return null;
+    @FindBy(xpath = "(//*[text()='Currency'])[3]")
+    public WebElement currency;
+
+    @FindBy(xpath = "(//*[@role='option'])[4]")
+    public WebElement currencyTRY;
 
 
     }
