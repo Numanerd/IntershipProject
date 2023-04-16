@@ -13,8 +13,6 @@ import java.time.Duration;
 
 public class Parent {
 
-    DialogContent dc=new DialogContent();
-
    public WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
 
     public void sendKeysFunction(WebElement element,String yazi)
@@ -55,8 +53,6 @@ public class Parent {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
     public void fuseProgressBar(){
-
-      wait.until(ExpectedConditions.elementToBeClickable(dc.searchButton));
       wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
 
     }
