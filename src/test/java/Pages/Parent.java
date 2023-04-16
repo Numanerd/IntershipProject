@@ -13,6 +13,7 @@ import java.time.Duration;
 
 public class Parent {
 
+    DialogContent dc=new DialogContent();
 
    public WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
 
@@ -53,9 +54,9 @@ public class Parent {
     public void waitUntilClickable(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
-    public void fuseProgressBar() {
+    public void searcBtnBayatlama(){
 
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
+      wait.until(ExpectedConditions.elementToBeClickable(dc.searchButton));
 
     }
 }

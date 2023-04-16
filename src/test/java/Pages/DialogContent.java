@@ -1,9 +1,11 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class DialogContent extends Parent {
 
@@ -50,15 +52,6 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "//div[@style='position: relative; height: 100%;']")
     public WebElement successfullyElement;
-
-    @FindBy(css = "[data-placeholder='IBAN']")
-    public WebElement iban;
-
-    @FindBy(xpath = "(//*[text()='Currency'])[3]")
-    public WebElement currency;
-
-    @FindBy(xpath = "(//*[@role='option'])[4]")
-    public WebElement currencyTRY;
 
     @FindBy(css = "[data-placeholder='Name']")          // Genel search name inputu
     public WebElement searchName;
