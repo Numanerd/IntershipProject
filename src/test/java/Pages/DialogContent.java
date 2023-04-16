@@ -93,7 +93,7 @@ public class DialogContent extends Parent {
     public WebElement description;
 
     @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']/input")
-    public  WebElement priority;
+    public WebElement priority;
 
     @FindBy(xpath = "//input[@data-placeholder='Description']")
     public WebElement descriptionInput;
@@ -107,4 +107,6 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//*[@role='option'])[4]")
     public WebElement currencyTRY;
 
+
+    }
 }
