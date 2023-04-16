@@ -54,9 +54,10 @@ public class Parent {
     public void waitUntilClickable(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
-    public void searcBtnBayatlama(){
+    public void fuseProgressBar(){
 
       wait.until(ExpectedConditions.elementToBeClickable(dc.searchButton));
+      wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
 
     }
 }
