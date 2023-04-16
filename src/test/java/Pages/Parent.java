@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,7 @@ import java.time.Duration;
 
 public class Parent {
 
+    DialogContent dc=new DialogContent();
 
     WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
 
@@ -51,5 +53,14 @@ public class Parent {
 
     public void waitUntilClickable(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+    public void searcBtnBayatlama(){
+
+        wait.until(ExpectedConditions.elementToBeClickable(dc.searchButton));//searc butonu tekrar click olana kadar bekle demekkendine geldi
+
+        //fuse-progress-bar  0 olana kadar bekle demek istiyorum (sayfa ust cizgide yukleme yapiyor)
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));// sifir olana kadar bekle
+
+
     }
 }
