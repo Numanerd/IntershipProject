@@ -56,10 +56,10 @@ public class Parent {
     }
     public void searcBtnBayatlama(){
 
-        wait.until(ExpectedConditions.elementToBeClickable(dc.searchButton));//searc butonu tekrar click olana kadar bekle demekkendine geldi
-
-        //fuse-progress-bar  0 olana kadar bekle demek istiyorum (sayfa ust cizgide yukleme yapiyor)
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));// sifir olana kadar bekle
+      wait.until(ExpectedConditions.elementToBeClickable(dc.searchButton));//searc butonu tekrar click olana kadar bekle demekkendine geldi
+//
+//        //fuse-progress-bar  0 olana kadar bekle demek istiyorum (sayfa ust cizgide yukleme yapiyor)
+//        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));// sifir olana kadar bekle
 
 
     }
