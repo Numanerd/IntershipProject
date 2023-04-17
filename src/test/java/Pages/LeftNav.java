@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.asynchttpclient.Param;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -64,5 +65,26 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "(//span[text()='Document Types'])[1]")
     public WebElement DocumentTypes;
 
+    @FindBy(xpath = "//span[text()='Grade Levels']")
+    public WebElement gradeLevels;
+
+
+
+
+
+
+
+    public WebElement getWebElement(String strButton){
+
+        switch (strButton)
+        {
+            case "gradeLevels" : return gradeLevels;
+            case "setup" : return Setup;
+            case "parameters" : return Parameters;
+
+        }
+
+        return null;
+    }
 
 }
