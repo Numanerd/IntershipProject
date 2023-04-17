@@ -51,15 +51,6 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//div[@style='position: relative; height: 100%;']")
     public WebElement successfullyElement;
 
-    @FindBy(css = "[data-placeholder='IBAN']")
-    public WebElement iban;
-
-    @FindBy(xpath = "(//*[text()='Currency'])[3]")
-    public WebElement currency;
-
-    @FindBy(xpath = "(//*[@role='option'])[4]")
-    public WebElement currencyTRY;
-
     @FindBy(css = "[data-placeholder='Name']")          // Genel search name inputu
     public WebElement searchName;
 
@@ -100,9 +91,29 @@ public class DialogContent extends Parent {
     public WebElement description;
 
     @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']/input")
-    public  WebElement priority;
+    public WebElement priority;
 
     @FindBy(xpath = "//input[@data-placeholder='Description']")
     public WebElement descriptionInput;
 
-}
+    @FindBy(css = "[data-placeholder='IBAN']")
+    public WebElement iban;
+
+    @FindBy(xpath = "(//*[text()='Currency'])[3]")
+    public WebElement currency;
+
+    @FindBy(xpath = "(//*[@role='option'])[4]")
+    public WebElement currencyTRY;
+
+    public WebElement getWebElement(String strbutton) {
+        switch (strbutton) {
+
+            case "nameInput":
+                return nameInput;
+            case "searchName":
+                return searchName;
+        }
+        return null;
+
+    }
+    }

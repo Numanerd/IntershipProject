@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class BankAccountSteps {
+public class AddEditDeleteBankAccountSteps {
 
     DialogContent dc = new DialogContent();
     LeftNav ln = new LeftNav();
@@ -36,7 +36,7 @@ public class BankAccountSteps {
 
         dc.sendKeysFunction(dc.searchName, "Grup12");
         dc.clickFunction(dc.searchButton);
-        pr.wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));    // sitenin genel bekletmesi;
+        pr.fuseProgressBar();
         dc.clickFunction(dc.myIBAN);
         dc.sendKeysFunction(dc.iban, "124grup12");
         dc.clickFunction(dc.saveBtn);
@@ -46,7 +46,7 @@ public class BankAccountSteps {
     public void deleteBankAccount() {
         dc.sendKeysFunction(dc.searchName, "Grup12");
         dc.clickFunction(dc.searchButton);
-        pr.wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));    // sitenin genel bekletmesi;
+        pr.fuseProgressBar();
         dc.clickFunction(dc.ibanDelete);
         dc.clickFunction(dc.deleteButton);
     }
