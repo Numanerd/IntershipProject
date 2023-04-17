@@ -5,13 +5,22 @@ Feature: Add Edit Delete Position
     When Enter username and password and click login button
     Then User should login successfully
 
-    Scenario:
+    Scenario: Add Position
       Given User should click on HumanResources on LeftNav
       When User should click on Setup
       And User should click on Position
       And click to Add Button
       Then New position
-      And Search Locations
-      And click to Edit Button Positions
-      And click to Delete Button
+
+      Scenario: Edit Position
+        Given User should click on HumanResources on LeftNav
+        When User should click on Setup
+        And User should click on Position
+        And click to Edit Button Positions
+
+        Scenario: Delete Position
+          Given User should click on HumanResources on LeftNav
+          When User should click on Setup
+          And User should click on Position
+          And click to Delete Button
 
