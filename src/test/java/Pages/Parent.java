@@ -56,4 +56,11 @@ public class Parent {
       wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
 
     }
+
+    public void sendKeysnoclear(WebElement element,String yazi)
+    {
+        waitUntilVisible(element);
+        scrollToElement(element);
+        element.sendKeys(yazi);
+    }
 }
