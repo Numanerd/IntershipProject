@@ -51,10 +51,10 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//div[@style='position: relative; height: 100%;']")
     public WebElement successfullyElement;
 
-    @FindBy(css = "[data-placeholder='Name']")          // Genel search name inputu
+    @FindBy(css = "[data-placeholder='Name']")
     public WebElement searchName;
 
-    @FindBy(xpath = "//*[text()='Search']")             // Genel search butonu
+    @FindBy(xpath = "//*[text()='Search']")
     public WebElement searchButton;
 
     @FindBy(xpath = "//*[text()='123grup12']")
@@ -110,6 +110,27 @@ public class DialogContent extends Parent {
     @FindBy(css = "[data-placeholder='Order']")
     public WebElement orderInput;
 
+    @FindBy(xpath = "//*[text()='osman123']")
+    public WebElement editGrade;
+
+    @FindBy(css = "[role='columnheader']:nth-child(1)")
+    public WebElement searchGrade;
+
+    @FindBy(xpath = "(//*[text()='osman123']/following-sibling::td)[5]//ms-delete-button")
+    public WebElement deleteGrade;
+
+
+
+
+
+
+
+
+
+
+
+
+
     public WebElement getWebElement(String strbutton) {
         switch (strbutton) {
 
@@ -125,9 +146,16 @@ public class DialogContent extends Parent {
                 return orderInput;
             case "saveBtn":
                 return saveBtn;
+            case "editGrade":
+                return editGrade;
+            case "searchGrade":
+                return searchGrade;
+            case "deleteGrade":
+                return deleteGrade;
+            case "deleteButton":
+                return deleteButton;
         }
         return null;
 
     }
-
-   }
+}

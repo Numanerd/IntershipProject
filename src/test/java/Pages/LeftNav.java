@@ -1,16 +1,15 @@
 package Pages;
 
 import Utilities.GWD;
-import org.asynchttpclient.Param;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNav extends Parent{
+public class LeftNav extends Parent {
 
 
-    public LeftNav(){
-        PageFactory.initElements(GWD.getDriver(),this);
+    public LeftNav() {
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
@@ -40,14 +39,13 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Subject Categories']")
     public WebElement subjectCategories;
 
-
-    @FindBy(xpath ="//span[text()='Human Resources']")
+    @FindBy(xpath = "//span[text()='Human Resources']")
     public WebElement HumanResources;
 
-    @FindBy(xpath ="(//span[text()='Setup'])[3]")
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
     public WebElement HumanResourcesSetup;
 
-    @FindBy (xpath = "//span[text()='Position Categories']")
+    @FindBy(xpath = "//span[text()='Position Categories']")
     public WebElement PositionCategories;
 
     @FindBy(linkText = "Fields")
@@ -72,15 +70,15 @@ public class LeftNav extends Parent{
 
 
 
+    public WebElement getWebElement(String strButton) {
 
-
-    public WebElement getWebElement(String strButton){
-
-        switch (strButton)
-        {
-            case "gradeLevels" : return gradeLevels;
-            case "setup" : return Setup;
-            case "parameters" : return Parameters;
+        switch (strButton) {
+            case "gradeLevels":
+                return gradeLevels;
+            case "setup":
+                return Setup;
+            case "parameters":
+                return Parameters;
 
         }
 

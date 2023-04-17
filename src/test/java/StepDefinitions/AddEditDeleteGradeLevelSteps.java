@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class GradeLevelsSteps {
+public class AddEditDeleteGradeLevelSteps {
 
     LeftNav ln = new LeftNav();
     DialogContent dc = new DialogContent();
@@ -35,10 +35,10 @@ public class GradeLevelsSteps {
 
     @And("User sending the keys in Dialog Content")
     public void userSendingTheKeysInDialogContent(DataTable dt) {
-        List< List<String> > items= dt.asLists(String.class);
+        List<List<String>> items = dt.asLists(String.class);
 
         for (int i = 0; i < items.size(); i++) {
-            WebElement element= dc.getWebElement(items.get(i).get(0));
+            WebElement element = dc.getWebElement(items.get(i).get(0));
             dc.sendKeysFunction(element, items.get(i).get(1));
         }
     }
