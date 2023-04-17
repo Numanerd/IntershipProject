@@ -105,6 +105,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//*[@role='option'])[4]")
     public WebElement currencyTRY;
 
+    @FindBy(css = "[data-placeholder='Order']")
+    public WebElement orderInput;
+
     public WebElement getWebElement(String strbutton) {
         switch (strbutton) {
 
@@ -112,8 +115,16 @@ public class DialogContent extends Parent {
                 return nameInput;
             case "searchName":
                 return searchName;
+            case "addButton":
+                return addImgButton;
+            case "shortName":
+                return shortName;
+            case "orderInput":
+                return orderInput;
+            case "saveBtn":
+                return saveBtn;
         }
         return null;
 
     }
-    }
+}
