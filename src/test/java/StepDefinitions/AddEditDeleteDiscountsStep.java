@@ -106,5 +106,7 @@ public class AddEditDeleteDiscountsStep {
         dc.clickFunction(dc.deleteButton);
 
     }
+
+
 }
 
