@@ -104,6 +104,8 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "(//*[@role='option'])[4]")
     public WebElement currencyTRY;
+    @FindBy(css = "[data-placeholder='Code']")
+    public WebElement searchCode;
 
     @FindBy(css = "[data-placeholder='Order']")
     public WebElement orderInput;
@@ -127,4 +129,5 @@ public class DialogContent extends Parent {
         return null;
 
     }
-}
+
+   }
