@@ -47,4 +47,18 @@ public class Step_09_Create_Edit_Delete_School_Depart {
     public void existAlreadyMessageShouldBeDisplayed() {
         dc.verifyContainsTextFunction(dc.successfullyElement, "already");
     }
+
+    @When("Edit  School Departments with Apache")
+    public void editSchoolDepartmentsWithApache() {
+        dc.clickFunction(dc.editImgButton);
+        dc.nameInput.clear();
+        dc.sendKeysFunction(dc.nameInput,"akcadags");
+        dc.clickFunction(dc.saveBtn);
+    }
+
+    @When("Delete  School Departments with Apache")
+    public void deleteSchoolDepartmentsWithApache() {
+        dc.clickFunction(dc.deleteImgButton);
+        dc.clickFunction(dc.deleteButton);
+    }
 }
