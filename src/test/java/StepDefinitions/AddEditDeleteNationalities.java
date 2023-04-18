@@ -52,23 +52,35 @@ public class AddEditDeleteNationalities {
 
     @Then("Click on Add Button")
     public void clickOnAddButton() {
-
         dc.clickFunction(dc.addImgButton);
-        dc.clickFunction(dc.closeButton);
+        dc.sendKeysFunction(dc.nameInput, "Kerim");
+        dc.clickFunction(dc.saveBtn);
+        dc.fuseProgressBar();
 
     }
 
     @Then("Click on Edit Button")
     public void clickOnEditButton() {
 
+        dc.clickFunction(dc.searchName);
+        dc.sendKeysFunction(dc.searchName, "Kerim");
+        dc.clickFunction(dc.searchButton);
+        dc.fuseProgressBar();
         dc.clickFunction(dc.editImgButton);
-        dc.clickFunction(dc.closeButton);
+        dc.sendKeysFunction(dc.nameInput, "KerimGulov");
+        dc.clickFunction(dc.saveBtn);
+        dc.fuseProgressBar();
 
     }
 
     @Then("Click on Delete Button")
     public void ClickOnDeleteButton() {
 
+        dc.clickFunction(dc.searchName);
+        dc.searchName.clear();
+        dc.sendKeysFunction(dc.searchName,"KerimGulov");
+        dc.clickFunction(dc.searchButton);
+        dc.fuseProgressBar();
         dc.clickFunction(dc.deleteImgButton);
         dc.clickFunction(dc.deleteButton);
 
