@@ -16,3 +16,13 @@ Feature: Add Edit and Delete Attestations
     When Create School Departments with Apache
     Then Exist already message should be displayed
 
+  Scenario:    Edit School Departments
+    And Navigate to School Departments
+    When Edit  School Departments with Apache
+    Then Success message should be displayed
+
+  Scenario:    Delete School Departments
+    And Navigate to School Departments
+    When Delete  School Departments with Apache
+    Then Success message should be displayed
+
