@@ -4,18 +4,11 @@ import Pages.DialogContent;
 import Pages.LeftNav;
 import Pages.Parent;
 import Utilities.GWD;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.util.List;
-
-public class DocumentTypesSteps {
+public class AddEditDeleteDocumentTypesSteps {
 
     DialogContent dc = new DialogContent();
     LeftNav ln = new LeftNav();
