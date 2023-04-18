@@ -75,6 +75,12 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//*[text()='Stage'])[3]")
     public WebElement stage;
 
+    @FindBy(xpath = "//span[text()=' Student Registration ']")
+    public WebElement studentRgstr;
+
+    @FindBy(xpath = "//span[text()=' Examination ']")
+    public WebElement examination;
+
     @FindBy(xpath = "//span[text()=' Certificate ']")
     public WebElement certificate;
 
