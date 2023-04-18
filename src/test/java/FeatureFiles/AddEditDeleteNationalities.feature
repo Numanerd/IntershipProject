@@ -2,17 +2,30 @@ Feature: Add Edit Delete Nationalities
 
   Background:
 
-    Given navigate to Campus Page
-    When enter username and password then click login button
-    Then user should login successfully on the Website
+    Given Navigate to Campus Page
+    When Enter username and password then click login button
+    Then User should login successfully on the Website
 
-  Scenario:
+
+  Scenario:Add Nationalities
     Given user clicks Setup on the LeftNav
     When  Click on Parameters
-    And   Click on Nationalities
-    Then  Click on Add Button
-    Then  Click on Edit Button
-    Then  Click on Delete Button
+    Then  Click on Nationalities
+    And   Click on Add Button
+
+  Scenario:Edit Nationalities
+    Given user clicks Setup on the LeftNav
+    When  Click on Parameters
+    Then  Click on Nationalities
+    And   Click on Edit Button
+
+  Scenario:Delete Nationalities
+    Given user clicks Setup on the LeftNav
+    When  Click on Parameters
+    Then  Click on Nationalities
+    And   Click on Delete Button
+
+
 
 
 
